@@ -1,0 +1,164 @@
+{
+  "format": "typenode-mcp-reference-draft",
+  "format_version": "0.1",
+  "status": "local_reference_draft_activation_pending",
+  "slug": "google-search-console-mcp",
+  "version": "0.1.0-draft",
+  "title": "Google Search Console MCP",
+  "headline": "Talk to your Google Search Console data in your AI client.",
+  "summary": "Read-only search performance, property discovery, sitemap metadata and URL inspection through 18 Typenode-hosted MCP tools.",
+  "description": "A reusable Google Search Console MCP template for SEO and marketing managers. Official API reads, bounded pagination and named retrieval presets supply evidence for an AI client to interpret. No Google configuration writes or automated SEO recommendations.",
+  "license": "MIT",
+  "runtime": {
+    "platform": "typenode",
+    "hosting": "customer_workspace",
+    "standalone": false
+  },
+  "distribution": {
+    "contents": "contracts_and_usage_documentation",
+    "implementation_included": false,
+    "activation": "through_typenode",
+    "public_activation_verified": false
+  },
+  "first_use_prompts": [
+    "List the Search Console properties I can access.",
+    "For my selected property, show clicks, impressions, CTR and average position for the last complete month.",
+    "Which queries brought impressions to a page I choose?"
+  ],
+  "prerequisites": [
+    "Typenode Workspace with setup and publication access; normal account/billing prerequisites apply.",
+    "Customer-owned Google Cloud project and custom OAuth Web application.",
+    "Enabled APIs: Google Search Console API.",
+    "Google account with access to each selected reporting property.",
+    "AI client supporting the authenticated Typenode remote MCP endpoint."
+  ],
+  "applications": [
+    {
+      "application_slug": "google-search-console",
+      "description": "A reusable Google Search Console MCP template for SEO and marketing managers. Official API reads, bounded pagination and named retrieval presets supply evidence for an AI client to interpret. No Google configuration writes or automated SEO recommendations.",
+      "authentication_option_id": "user-oauth",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/webmasters.readonly"
+      ],
+      "required_apis": [
+        {
+          "service": "searchconsole.googleapis.com",
+          "name": "Google Search Console API"
+        }
+      ],
+      "setup_guidance": "docs/setup.md"
+    }
+  ],
+  "configuration_requirements": [
+    {
+      "key": "GSC_ACCESS_TOKEN",
+      "kind": "oauth_credential",
+      "required": true,
+      "description": "Renewable OAuth-backed Google connection configured securely in the selected Environment; no credential values are stored here."
+    },
+    {
+      "key": "GSC_CREDENTIAL_CONTEXT",
+      "kind": "environment_configuration",
+      "required": true,
+      "description": "Stable ID of this installation's Google Credential, used to isolate continuation cursors."
+    }
+  ],
+  "tools": [
+    {
+      "name": "list_gsc_properties",
+      "contract": "tools/list_gsc_properties.json"
+    },
+    {
+      "name": "get_gsc_property",
+      "contract": "tools/get_gsc_property.json"
+    },
+    {
+      "name": "query_gsc_performance",
+      "contract": "tools/query_gsc_performance.json"
+    },
+    {
+      "name": "get_gsc_performance_totals",
+      "contract": "tools/get_gsc_performance_totals.json"
+    },
+    {
+      "name": "get_gsc_performance_time_series",
+      "contract": "tools/get_gsc_performance_time_series.json"
+    },
+    {
+      "name": "get_gsc_page_queries",
+      "contract": "tools/get_gsc_page_queries.json"
+    },
+    {
+      "name": "get_gsc_query_pages",
+      "contract": "tools/get_gsc_query_pages.json"
+    },
+    {
+      "name": "get_gsc_page_query_rows",
+      "contract": "tools/get_gsc_page_query_rows.json"
+    },
+    {
+      "name": "get_gsc_search_appearances",
+      "contract": "tools/get_gsc_search_appearances.json"
+    },
+    {
+      "name": "get_gsc_available_dates",
+      "contract": "tools/get_gsc_available_dates.json"
+    },
+    {
+      "name": "get_gsc_performance_overview",
+      "contract": "tools/get_gsc_performance_overview.json"
+    },
+    {
+      "name": "get_gsc_period_datasets",
+      "contract": "tools/get_gsc_period_datasets.json"
+    },
+    {
+      "name": "get_gsc_surface_datasets",
+      "contract": "tools/get_gsc_surface_datasets.json"
+    },
+    {
+      "name": "get_gsc_property_datasets",
+      "contract": "tools/get_gsc_property_datasets.json"
+    },
+    {
+      "name": "list_gsc_sitemaps",
+      "contract": "tools/list_gsc_sitemaps.json"
+    },
+    {
+      "name": "get_gsc_sitemap",
+      "contract": "tools/get_gsc_sitemap.json"
+    },
+    {
+      "name": "inspect_gsc_url",
+      "contract": "tools/inspect_gsc_url.json"
+    },
+    {
+      "name": "inspect_gsc_urls",
+      "contract": "tools/inspect_gsc_urls.json"
+    }
+  ],
+  "mcp_server": {
+    "name": "Google Search Console",
+    "description": "Read-only search performance, property discovery, sitemap metadata and URL inspection through 18 Typenode-hosted MCP tools."
+  },
+  "guidance": {
+    "setup": "docs/setup.md",
+    "verification": "docs/verification.md",
+    "first_use": "prompts/getting-started.md",
+    "tasks": "prompts/search-performance.md",
+    "combined": "prompts/with-ga4.md",
+    "examples": "examples/README.md"
+  },
+  "success_criteria": [
+    "Fresh client discovery exposes all 18 domain tools.",
+    "Property discovery returns a typed result from the newly configured Google identity.",
+    "A dated report succeeds or returns a legitimate typed empty result for a selected accessible property.",
+    "Continuation/error boundaries match the included schemas and descriptions.",
+    "Provider and client authentication renewal are verified after known expiry before broad promotion."
+  ],
+  "notes": [
+    "Created by Typenode; not affiliated with or endorsed by Google.",
+    "Reference metadata only; not an installer, Workflow export or executable MCP server.",
+    "Application/authentication reference identifiers are provisional until the shared catalog contract is finalised."
+  ]
+}

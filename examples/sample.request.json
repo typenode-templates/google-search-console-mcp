@@ -1,0 +1,8 @@
+{
+  "tool": "get_gsc_performance_totals",
+  "arguments": {
+    "property": "sc-domain:example.com",
+    "start_date": "2026-09-01",
+    "end_date": "2026-09-30"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "evidence_type": "synthetic",
+  "note": "Invented identifiers/dates; schema examples, not live calls. Replace selections with discovered accessible resources.",
+  "tool_calls": [
+    {
+      "tool": "list_gsc_properties",
+      "arguments": {}
+    },
+    {
+      "tool": "get_gsc_property",
+      "arguments": {
+        "property": "sc-domain:example.com"
+      }
+    },
+    {
+      "tool": "query_gsc_performance",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30",
+        "dimensions": [
+          "country",
+          "device"
+        ],
+        "filters": [
+          {
+            "dimension": "query",
+            "operator": "includingRegex",
+            "expression": "example|product"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "get_gsc_performance_totals",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30"
+      }
+    },
+    {
+      "tool": "get_gsc_performance_time_series",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "start_date": "2026-10-05",
+        "end_date": "2026-10-05",
+        "granularity": "hour",
+        "data_state": "hourly_all"
+      }
+    },
+    {
+      "tool": "get_gsc_page_queries",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30",
+        "page_filter": {
+          "expression": "https://example.com/product/"
+        }
+      }
+    },
+    {
+      "tool": "get_gsc_query_pages",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30",
+        "query_filter": {
+          "expression": "example product"
+        }
+      }
+    },
+    {
+      "tool": "get_gsc_page_query_rows",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30",
+        "breakdown_dimensions": [
+          "country"
+        ]
+      }
+    },
+    {
+      "tool": "get_gsc_search_appearances",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30"
+      }
+    },
+    {
+      "tool": "get_gsc_available_dates",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30"
+      }
+    },
+    {
+      "tool": "get_gsc_performance_overview",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30",
+        "detail": {
+          "dimensions": [
+            "page"
+          ],
+          "page_size": 50
+        }
+      }
+    },
+    {
+      "tool": "get_gsc_period_datasets",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "periods": [
+          {
+            "label": "current",
+            "start_date": "2026-09-01",
+            "end_date": "2026-09-30"
+          },
+          {
+            "label": "previous",
+            "start_date": "2026-08-01",
+            "end_date": "2026-08-31"
+          }
+        ],
+        "dimensions": [
+          "page"
+        ]
+      }
+    },
+    {
+      "tool": "get_gsc_surface_datasets",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30",
+        "search_types": [
+          "web",
+          "image"
+        ],
+        "dimensions": [
+          "page"
+        ]
+      }
+    },
+    {
+      "tool": "get_gsc_property_datasets",
+      "arguments": {
+        "properties": [
+          "sc-domain:example.com",
+          "https://blog.example.com/"
+        ],
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30",
+        "dimensions": [
+          "date"
+        ]
+      }
+    },
+    {
+      "tool": "list_gsc_sitemaps",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "sitemap_index": "https://example.com/sitemap-index.xml"
+      }
+    },
+    {
+      "tool": "get_gsc_sitemap",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "sitemap_url": "https://example.com/sitemap.xml"
+      }
+    },
+    {
+      "tool": "inspect_gsc_url",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "inspection_url": "https://example.com/product/"
+      }
+    },
+    {
+      "tool": "inspect_gsc_urls",
+      "arguments": {
+        "property": "sc-domain:example.com",
+        "inspection_urls": [
+          "https://example.com/product/",
+          "https://example.com/docs/"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "contract_version": "1.0",
+  "status": "ok",
+  "retrieved_at": "2026-10-06T12:00:00Z",
+  "requests_attempted": 1,
+  "error": null,
+  "coverage_notes": [],
+  "dataset": {
+    "dataset_id": "totals",
+    "status": "ok",
+    "retrieved_at": "2026-10-06T12:00:00Z",
+    "effective_request": {
+      "property": "sc-domain:example.com",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "search_type": "web",
+      "data_state": "final",
+      "aggregation_type": "auto",
+      "filters": [],
+      "dimensions": [],
+      "page_size": 1,
+      "row_filters": []
+    },
+    "rows": [
+      {
+        "keys": [],
+        "clicks": 42.0,
+        "impressions": 251.0,
+        "ctr": 0.16733067729083664,
+        "position": 3.8266932270916336
+      }
+    ],
+    "response_aggregation_type": "byProperty",
+    "source_metadata": null,
+    "source_fields": {},
+    "pagination": {
+      "source_start_row": 0,
+      "source_rows_acquired": 1,
+      "source_rows_consumed": 1,
+      "returned_count": 1,
+      "has_more": false,
+      "next_cursor": null,
+      "continuation_evidence": "source_aggregate"
+    },
+    "coverage_notes": [],
+    "error": null
+  }
+}
