@@ -11,7 +11,7 @@ Reconciled on 17 October 2026 against the current reviewed template artifact, al
 | Synthetic/replay checks | The retained shared suite reported 867 passing runtime output cases. This is a combined suite count, not 18 tools multiplied by live calls. Quota and permission failures were simulated rather than deliberately forced live. |
 | Current Templates installation | All 37 Google Workflows have live deployments with no unpublished drift. The regex amendment passed 181 local cases and 37 source validators; intended-client property/report reads succeeded for both servers, including a GA4 nested AND/NOT filter. Representative malformed requests returned actionable corrections without Google calls. This was not a fresh all-tool live rerun. |
 | This reference package | Contract JSON, schemas, examples, local links, canonical interface agreement and absence of implementation fields are checked locally. These are documentation checks, not live execution evidence. |
-| Public activation flow | The template landing page is available. End-to-end installation of the latest published snapshot in an independent customer Workspace remains unverified. The public contracts are not executable installation files. |
+| Public activation flow | The reviewed bundle was published to production on 17 October 2026 and its exact snapshot/tool inventory was read back through the catalog MCP. The landing page is available; independent customer installation remains unverified. The public contracts are not executable installation files. |
 | Authentication | Post-expiry renewal and client discovery must be checked on the final public setup path. Do not infer lifecycle reliability from a connected badge. |
 
 ## Known limits

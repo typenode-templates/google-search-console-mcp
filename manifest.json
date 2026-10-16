@@ -1,7 +1,7 @@
 {
   "format": "typenode-mcp-reference-draft",
   "format_version": "0.1",
-  "status": "local_reference_draft_activation_pending",
+  "status": "published_template_reference",
   "slug": "google-search-console-mcp",
   "version": "0.1.0-draft",
   "title": "Google Search Console MCP",
@@ -159,6 +159,6 @@
   "notes": [
     "Created by Typenode; not affiliated with or endorsed by Google.",
     "Reference metadata only; not an installer, Workflow export or executable MCP server.",
-    "Application/authentication reference identifiers are provisional until the shared catalog contract is finalised."
+    "Application/authentication reference identifiers match the reviewed current catalog."
   ]
 }
